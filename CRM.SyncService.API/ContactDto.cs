@@ -1,7 +1,7 @@
 ﻿namespace CRM.SyncService.API
 {
     public record ContactDto(
-        string Contact_Name,
+        string contactName,
         string Phone,
         string Email,
         string Status,

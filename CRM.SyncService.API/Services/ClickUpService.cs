@@ -39,7 +39,7 @@ public static class ClickUpService
     public static async Task PushContactAsync(ContactDto contact)
     {
         var client = new RestClient("https://api.clickup.com/api/v2");
-        var taskName = NormalizeTaskName(contact.Contact_Name);
+        var taskName = NormalizeTaskName(contact.contactName);
 
         var body = new
         {
@@ -48,7 +48,7 @@ public static class ClickUpService
             {
                 new { id = CustomPhoneId, value = FormatPhone(contact.Phone) },
                 new { id = CustomEmailId, value = contact.Email },
-                new { id = CustomFullNameId, value = contact.Contact_Name } 
+                new { id = CustomFullNameId, value = contact.contactName } 
             }
         };
 
