@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "2bi4cQA5/awRxyjCG7zTItVMg0v1HnPeL2u8A7KghB4=",
+  "Source": "CRM.SyncService.API",
+  "BasePath": "_content/CRM.SyncService.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

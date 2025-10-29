@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "3WQEeinl1Dk=",
+  "success": true,
+  "projectFilePath": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\CRM.SyncService.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\google.apis\\1.70.0\\google.apis.1.70.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\google.apis.auth\\1.70.0\\google.apis.auth.1.70.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\google.apis.core\\1.70.0\\google.apis.core.1.70.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\google.apis.sheets.v4\\1.70.0.3819\\google.apis.sheets.v4.1.70.0.3819.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

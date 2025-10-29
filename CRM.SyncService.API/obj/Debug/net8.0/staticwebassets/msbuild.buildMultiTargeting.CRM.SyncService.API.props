@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CRM.SyncService.API.props" />
+</Project>
