@@ -30,23 +30,10 @@ public static class ClickUpService
     {
         if (string.IsNullOrWhiteSpace(name)) return "NoName";
 
-        // Chuyển Unicode sang dạng không dấu
-        string normalized = name.Normalize(NormalizationForm.FormD);
-        var sb = new StringBuilder();
-        foreach (var c in normalized)
-        {
-            var uc = CharUnicodeInfo.GetUnicodeCategory(c);
-            if (uc != UnicodeCategory.NonSpacingMark)
-                sb.Append(c);
-        }
-        string ascii = sb.ToString().Normalize(NormalizationForm.FormC);
-
-        // Chỉ giữ ký tự ASCII, chữ, số, khoảng trắng
-        ascii = Regex.Replace(ascii, @"[^\u0000-\u007F]+", "");
-        ascii = Regex.Replace(ascii, @"\s+", " ").Trim();
-
-        return string.IsNullOrWhiteSpace(ascii) ? "ContactTask" : ascii;
+        // Chỉ trim khoảng trắng thừa
+        return Regex.Replace(name.Trim(), @"\s+", " ");
     }
+
 
 
     public static async Task PushContactAsync(ContactDto contact)
