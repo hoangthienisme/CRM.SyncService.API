@@ -58,7 +58,7 @@ app.MapPost("/crm/sync", async () =>
             //await GoogleSheetService.UpdateContactAsync(c);
 
             // Log Telegram
-            await TelegramService.SendLogAsync($" Sync thành công: {c.Contact_Name}");
+            await TelegramService.SendLogAsync($" Sync thành công: {c.contactName}");
         }
 
         return Results.Ok(new { status = "success", total = contacts.Count });

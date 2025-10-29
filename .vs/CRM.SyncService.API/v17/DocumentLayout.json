@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\BE AIHUB\\CRM.SyncService.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|d:\\be aihub\\crm.syncservice.api\\crm.syncservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|solutionrelative:crm.syncservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|d:\\be aihub\\crm.syncservice.api\\crm.syncservice.api\\services\\clickupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|solutionrelative:crm.syncservice.api\\services\\clickupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|d:\\be aihub\\crm.syncservice.api\\crm.syncservice.api\\services\\telegramservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|solutionrelative:crm.syncservice.api\\services\\telegramservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|d:\\be aihub\\crm.syncservice.api\\crm.syncservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|solutionrelative:crm.syncservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01F300F3-9DB2-4AD8-A952-DCEE92DBE28D}|CRM.SyncService.API\\CRM.SyncService.API.csproj|d:\\be aihub\\crm.syncservice.api\\crm.syncservice.api\\credentials.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -42,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ClickUpService.cs",
               "DocumentMoniker": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\Services\\ClickUpService.cs",
               "RelativeDocumentMoniker": "CRM.SyncService.API\\Services\\ClickUpService.cs",
               "ToolTip": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\Services\\ClickUpService.cs",
               "RelativeToolTip": "CRM.SyncService.API\\Services\\ClickUpService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCsAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwDEAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T10:45:31.047Z",
               "IsPinned": true,
@@ -73,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TelegramService.cs",
               "DocumentMoniker": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\Services\\TelegramService.cs",
               "RelativeDocumentMoniker": "CRM.SyncService.API\\Services\\TelegramService.cs",
@@ -85,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GoogleSheetService.cs",
               "DocumentMoniker": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\Services\\GoogleSheetService.cs",
               "RelativeDocumentMoniker": "CRM.SyncService.API\\Services\\GoogleSheetService.cs",
@@ -97,25 +97,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\Program.cs",
               "RelativeDocumentMoniker": "CRM.SyncService.API\\Program.cs",
               "ToolTip": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\Program.cs",
               "RelativeToolTip": "CRM.SyncService.API\\Program.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAYwDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAtwEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T10:48:30.902Z"
+              "WhenOpened": "2025-10-28T10:48:30.902Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ContactDto.cs",
               "DocumentMoniker": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\ContactDto.cs",
               "RelativeDocumentMoniker": "CRM.SyncService.API\\ContactDto.cs",
               "ToolTip": "D:\\BE AIHUB\\CRM.SyncService.API\\CRM.SyncService.API\\ContactDto.cs",
               "RelativeToolTip": "CRM.SyncService.API\\ContactDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T10:47:12.326Z",
               "EditorCaption": ""
