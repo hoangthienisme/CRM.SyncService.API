@@ -1,6 +1,7 @@
 ﻿using CRM.SyncService.API;
 using Newtonsoft.Json;
 using RestSharp;
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -28,11 +29,19 @@ public static class ClickUpService
     private static string NormalizeTaskName(string name)
     {
         if (string.IsNullOrWhiteSpace(name)) return "NoName";
-        // Loại bỏ các ký tự đặc biệt
-        var ascii = Regex.Replace(name.Normalize(NormalizationForm.FormKD), @"[^\u0000-\u007F]+", "");
-        // Nếu rỗng sau khi loại bỏ ký tự, đặt tên mặc định
-        return string.IsNullOrWhiteSpace(ascii) ? "ContactTask" : ascii;
+
+        // Chuyển dấu tiếng Việt sang không dấu
+        string normalized = name
+            .Normalize(NormalizationForm.FormD)
+            .Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
+            .Aggregate("", (s, c) => s + c);
+
+        // Loại bỏ ký tự đặc biệt khác
+        normalized = Regex.Replace(normalized, @"[^\w\s-]", "");
+
+        return string.IsNullOrWhiteSpace(normalized) ? "ContactTask" : normalized;
     }
+
 
     public static async Task PushContactAsync(ContactDto contact)
     {
