@@ -30,16 +30,22 @@ public static class ClickUpService
     {
         if (string.IsNullOrWhiteSpace(name)) return "NoName";
 
-        // Chuyển dấu tiếng Việt sang không dấu
-        string normalized = name
-            .Normalize(NormalizationForm.FormD)
-            .Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
-            .Aggregate("", (s, c) => s + c);
+        // Chuyển Unicode sang dạng không dấu
+        string normalized = name.Normalize(NormalizationForm.FormD);
+        var sb = new StringBuilder();
+        foreach (var c in normalized)
+        {
+            var uc = CharUnicodeInfo.GetUnicodeCategory(c);
+            if (uc != UnicodeCategory.NonSpacingMark)
+                sb.Append(c);
+        }
+        string ascii = sb.ToString().Normalize(NormalizationForm.FormC);
 
-        // Loại bỏ ký tự đặc biệt khác
-        normalized = Regex.Replace(normalized, @"[^\w\s-]", "");
+        // Chỉ giữ ký tự ASCII, chữ, số, khoảng trắng
+        ascii = Regex.Replace(ascii, @"[^\u0000-\u007F]+", "");
+        ascii = Regex.Replace(ascii, @"\s+", " ").Trim();
 
-        return string.IsNullOrWhiteSpace(normalized) ? "ContactTask" : normalized;
+        return string.IsNullOrWhiteSpace(ascii) ? "ContactTask" : ascii;
     }
 
 
