@@ -2,8 +2,8 @@
 
 public static class TelegramService
 {
-    private static string BotToken = "YOUR_BOT_TOKEN";
-    private static string ChatId = "YOUR_CHAT_ID";
+    private static string BotToken = "7743481184:AAG7mt4MYz4XBGb1-SeHd0nLMy2TM6OVxys";
+    private static string ChatId = "-1003065878488";
 
     public static async Task SendLogAsync(string message)
     {

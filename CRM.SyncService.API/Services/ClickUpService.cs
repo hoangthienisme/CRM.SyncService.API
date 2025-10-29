@@ -4,7 +4,7 @@ using CRM.SyncService.API;
 
 public static class ClickUpService
 {
-    private static string ApiToken = "pk_294795597_7H10XH7XXPFPYA3OLWXG87T7FB0RAQWU";
+    private static string ApiToken = "pk_294795597_MWJJI41L9W1WK2CJFBBFRX6DYG5MTWY8";
 
     private static string ListId = "901812735003";
 
@@ -51,7 +51,8 @@ public static class ClickUpService
 
         var response = await client.ExecuteAsync(request);
         if (!response.IsSuccessful)
-            throw new Exception($"ClickUp API error: {response.Content}");
+            throw new Exception($"ClickUp API error (StatusCode: {response.StatusCode}): {response.Content}");
+
     }
 
 }
