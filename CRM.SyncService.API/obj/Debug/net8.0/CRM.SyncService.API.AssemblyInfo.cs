@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRM.SyncService.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c76f5057b5265b26819677d71efa9fc59c75e989")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f3715170b18171b50dc76c45a9a046f5f722d80")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRM.SyncService.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRM.SyncService.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -55,7 +55,7 @@ app.MapPost("/crm/sync", async () =>
             await ClickUpService.PushContactAsync(c);
 
             // Cập nhật Google Sheet
-            await GoogleSheetService.UpdateContactAsync(c);
+            //await GoogleSheetService.UpdateContactAsync(c);
 
             // Log Telegram
             await TelegramService.SendLogAsync($" Sync thành công: {c.Contact_Name}");
