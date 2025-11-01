@@ -24,13 +24,9 @@ public static class ClickUpService
             return phone;
         return "+" + phone;
     }
-
-    // Convert tên task sang ASCII hợp lệ để tránh lỗi
     private static string NormalizeTaskName(string name)
     {
         if (string.IsNullOrWhiteSpace(name)) return "NoName";
-
-        // Chỉ trim khoảng trắng thừa
         return Regex.Replace(name.Trim(), @"\s+", " ");
     }
 

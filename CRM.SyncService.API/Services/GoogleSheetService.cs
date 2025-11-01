@@ -29,12 +29,9 @@ public static class GoogleSheetService
     {
         var service = GetService();
         var sheetName = "Contact";
-
-        // 1. Kiểm tra sheet tồn tại chưa
         var spreadsheet = await service.Spreadsheets.Get(SpreadsheetId).ExecuteAsync();
         if (!spreadsheet.Sheets.Any(s => s.Properties.Title == sheetName))
         {
-            // Tạo sheet mới
             var addSheetRequest = new Request
             {
                 AddSheet = new AddSheetRequest
@@ -45,12 +42,9 @@ public static class GoogleSheetService
             var batchUpdate = new BatchUpdateSpreadsheetRequest { Requests = new List<Request> { addSheetRequest } };
             await service.Spreadsheets.BatchUpdate(batchUpdate, SpreadsheetId).ExecuteAsync();
         }
-
-        // 2. Kiểm tra sheet trống chưa
         var existingData = await service.Spreadsheets.Values.Get(SpreadsheetId, $"{sheetName}!A1:E1").ExecuteAsync();
         if (existingData.Values == null || existingData.Values.Count == 0)
         {
-            // Thêm header
             var headerRange = $"{sheetName}!A1:E1";
             var headerValues = new ValueRange
             {
@@ -60,8 +54,6 @@ public static class GoogleSheetService
             appendHeaderRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.RAW;
             await appendHeaderRequest.ExecuteAsync();
         }
-
-        // 3. Append dữ liệu contact
         var dataRange = $"{sheetName}!A:E";
         var valueRange = new ValueRange
         {

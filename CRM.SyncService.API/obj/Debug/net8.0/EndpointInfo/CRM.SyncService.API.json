@@ -2,6 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "CRM Sync API",
+    "description": "API đồng bộ dữ liệu từ Charm CRM sang ClickUp và Google Sheet",
     "version": "v1"
   },
   "paths": {
